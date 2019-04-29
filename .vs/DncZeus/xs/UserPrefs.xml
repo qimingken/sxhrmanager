@@ -1,0 +1,33 @@
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{33B1926D-E1BF-4B94-BC27-4CCD24CB3642}|Default">
+  <MonoDevelop.Ide.ItemProperties.DncZeus.Api PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DncZeus.Api/appsettings.json">
+    <Files>
+      <File FileName="DncZeus.Api/ViewModels/Rbac/DncIcon/IconCreateViewModel.cs" Line="51" Column="1" />
+      <File FileName="DncZeus.Api/appsettings.json" Line="17" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DncZeus" expanded="True">
+            <Node name="DncZeus.Api" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="Rbac" expanded="True">
+                  <Node name="DncIcon" expanded="True" />
+                  <Node name="DncMenu" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

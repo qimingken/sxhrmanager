@@ -1,0 +1,5 @@
+/Users/qiming/Documents/xinjeCloud/web/xinjecloud/DncZeus.Api/obj/Debug/netcoreapp2.1/XinjeCloud.Api.csproj.CoreCompileInputs.cache
+/Users/qiming/Documents/xinjeCloud/web/xinjecloud/DncZeus.Api/obj/Debug/netcoreapp2.1/XinjeCloud.Api.RazorAssemblyInfo.cache
+/Users/qiming/Documents/xinjeCloud/web/xinjecloud/DncZeus.Api/obj/Debug/netcoreapp2.1/XinjeCloud.Api.RazorAssemblyInfo.cs
+/Users/qiming/Documents/xinjeCloud/web/xinjecloud/DncZeus.Api/obj/Debug/netcoreapp2.1/XinjeCloud.Api.AssemblyInfoInputs.cache
+/Users/qiming/Documents/xinjeCloud/web/xinjecloud/DncZeus.Api/obj/Debug/netcoreapp2.1/XinjeCloud.Api.AssemblyInfo.cs

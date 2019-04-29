@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{33B1926D-E1BF-4B94-BC27-4CCD24CB3642}|Default">
+  <MonoDevelop.Ide.ItemProperties.XinjeCloud.Api PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DncZeus.Api/Startup.cs">
+    <Files>
+      <File FileName="DncZeus.Api/Startup.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XinjeCloud" expanded="True">
+            <Node name="XinjeCloud.Api" expanded="True" selected="True">
+              <Node name="Configurations" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

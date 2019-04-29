@@ -1,0 +1,2906 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DncZeus.Api</name>
+    </assembly>
+    <members>
+        <member name="T:DncZeus.Api.Auth.AppAuthenticationSettings">
+            <summary>
+            JWT授权的配置项
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Auth.AppAuthenticationSettings.AppId">
+            <summary>
+            应用ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Auth.AppAuthenticationSettings.Secret">
+            <summary>
+            应用密钥(真实项目中可能区分应用,不同的应用对应惟一的密钥)
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Auth.JwtBearerAuthenticationExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Auth.JwtBearerAuthenticationExtension.AddJwtBearerAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,DncZeus.Api.Auth.AppAuthenticationSettings)">
+            <summary>
+            注册JWT Bearer认证服务的静态扩展方法
+            </summary>
+            <param name="services"></param>
+            <param name="appSettings">JWT授权的配置项</param>
+        </member>
+        <member name="T:DncZeus.Api.Configurations.AppSettings">
+            <summary>
+            程序配置选项
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Configurations.AppSettings.IsTrialVersion">
+            <summary>
+            是否是体验版
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Configurations.MappingProfile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Configurations.MappingProfile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.AccountController.#ctor(DncZeus.Api.Entities.DncZeusDbContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.AccountController.Profile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.MessageController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.MessageController.Count">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.MessageController.Init">
+            <summary>
+            初始化消息标题列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.MessageController.Content(System.Int32)">
+            <summary>
+            获取指定ID的消息内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.MessageController.HasRead(System.Int32)">
+            <summary>
+            将消息标为已读
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.MessageController.RemoveRead(System.Int32)">
+            <summary>
+            删除已读消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.MessageController.Restore(System.Int32)">
+            <summary>
+            恢复已删消息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.Rbac.IconController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.#ctor(DncZeus.Api.Entities.DncZeusDbContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.List(DncZeus.Api.RequestPayload.Rbac.Icon.IconRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.FindByKeyword(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.Create(DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel)">
+            <summary>
+            创建图标
+            </summary>
+            <param name="model">图标视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.Edit(System.Int32)">
+            <summary>
+            编辑图标
+            </summary>
+            <param name="id">图标ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.Edit(DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel)">
+            <summary>
+            保存编辑后的图标信息
+            </summary>
+            <param name="model">图标视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.Delete(System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="ids">图标ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.Recover(System.String)">
+            <summary>
+            恢复图标
+            </summary>
+            <param name="ids">图标ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">图标ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.Import(DncZeus.Api.ViewModels.Rbac.DncIcon.IconImportViewModel)">
+            <summary>
+            创建图标
+            </summary>
+            <param name="model">多行图标视图</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.UpdateIsDelete(DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">图标ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.IconController.UpdateStatus(DncZeus.Api.Entities.UserStatus,System.String)">
+            <summary>
+            删除图标
+            </summary>
+            <param name="status">图标状态</param>
+            <param name="ids">图标ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.#ctor(DncZeus.Api.Entities.DncZeusDbContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.List(DncZeus.Api.RequestPayload.Rbac.Menu.MenuRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.Create(DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel)">
+            <summary>
+            创建菜单
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.Edit(System.Guid)">
+            <summary>
+            编辑菜单
+            </summary>
+            <param name="guid">菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.Edit(DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel)">
+            <summary>
+            保存编辑后的菜单信息
+            </summary>
+            <param name="model">菜单视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.Tree(System.String)">
+            <summary>
+            菜单树
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.Delete(System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.Recover(System.String)">
+            <summary>
+            恢复菜单
+            </summary>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">菜单ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.UpdateIsDelete(DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuController.UpdateStatus(DncZeus.Api.Entities.UserStatus,System.String)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="status">菜单状态</param>
+            <param name="ids">菜单ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.Rbac.MenuTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.MenuTreeHelper.BuildTree(System.Collections.Generic.List{DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="menus"></param>
+            <param name="selectedGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController">
+            <summary>
+            权限控制器
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.#ctor(DncZeus.Api.Entities.DncZeusDbContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.List(DncZeus.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.Create(DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel)">
+            <summary>
+            创建权限
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(System.String)">
+            <summary>
+            编辑权限
+            </summary>
+            <param name="code">权限惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.Edit(DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel)">
+            <summary>
+            保存编辑后的权限信息
+            </summary>
+            <param name="model">权限视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.Delete(System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.Recover(System.String)">
+            <summary>
+            恢复权限
+            </summary>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">权限ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.PermissionTree(System.String)">
+            <summary>
+            角色-权限菜单树
+            </summary>
+            <param name="code">角色编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateIsDelete(DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionController.UpdateStatus(DncZeus.Api.Entities.UserStatus,System.String)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="status">权限状态</param>
+            <param name="ids">权限ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.PermissionTreeHelper.FillRecursive(System.Collections.Generic.List{DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree},System.Collections.Generic.List{DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty},System.Nullable{System.Guid},System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="menus">菜单集合</param>
+            <param name="permissions">权限集合</param>
+            <param name="parentGuid">父级菜单GUID</param>
+            <param name="isSuperAdministrator">是否为超级管理员角色</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.#ctor(DncZeus.Api.Entities.DncZeusDbContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.List(DncZeus.Api.RequestPayload.Rbac.Role.RoleRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.Create(DncZeus.Api.ViewModels.Rbac.DncRole.RoleCreateViewModel)">
+            <summary>
+            创建角色
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.Edit(System.String)">
+            <summary>
+            编辑角色
+            </summary>
+            <param name="code">角色惟一编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.Edit(DncZeus.Api.ViewModels.Rbac.DncRole.RoleCreateViewModel)">
+            <summary>
+            保存编辑后的角色信息
+            </summary>
+            <param name="model">角色视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.Delete(System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.Recover(System.String)">
+            <summary>
+            恢复角色
+            </summary>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">角色ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.AssignPermission(DncZeus.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload)">
+            <summary>
+            为指定角色分配权限
+            </summary>
+            <param name="payload">角色分配权限的请求载体类</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.FindListByUserGuid(System.Guid)">
+            <summary>
+            获取指定用户的角色列表
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.FindSimpleList">
+            <summary>
+            查询所有角色列表(只包含主要的字段信息:name,code)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.UpdateIsDelete(DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.RoleController.UpdateStatus(DncZeus.Api.Entities.UserStatus,System.String)">
+            <summary>
+            删除角色
+            </summary>
+            <param name="status">角色状态</param>
+            <param name="ids">角色ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.Api.V1.Rbac.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.#ctor(DncZeus.Api.Entities.DncZeusDbContext,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.List(DncZeus.Api.RequestPayload.Rbac.User.UserRequestPayload)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.Create(DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.Edit(System.Guid)">
+            <summary>
+            编辑用户
+            </summary>
+            <param name="guid">用户GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.Edit(DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel)">
+            <summary>
+            保存编辑后的用户信息
+            </summary>
+            <param name="model">用户视图实体</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.Delete(System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.Recover(System.String)">
+            <summary>
+            恢复用户
+            </summary>
+            <param name="ids">用户GUID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.Batch(System.String,System.String)">
+            <summary>
+            批量操作
+            </summary>
+            <param name="command"></param>
+            <param name="ids">用户ID,多个以逗号分隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.SaveRoles(DncZeus.Api.ViewModels.Rbac.DncUser.SaveUserRolesViewModel)">
+            <summary>
+            保存用户-角色的关系映射数据
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.UpdateIsDelete(DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted,System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="isDeleted"></param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.Api.V1.Rbac.UserController.UpdateStatus(DncZeus.Api.Entities.UserStatus,System.String)">
+            <summary>
+            删除用户
+            </summary>
+            <param name="status">用户状态</param>
+            <param name="ids">用户ID字符串,多个以逗号隔开</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.api.v2.UserController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.ErrorController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.ErrorController.Code(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Controllers.OauthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.OauthController.#ctor(Microsoft.Extensions.Options.IOptions{DncZeus.Api.Auth.AppAuthenticationSettings},DncZeus.Api.Entities.DncZeusDbContext)">
+            <summary>
+            
+            </summary>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:DncZeus.Api.Controllers.OauthController.Auth(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="username"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncZeusDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Entities.DncZeusDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{DncZeus.Api.Entities.DncZeusDbContext})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncUser">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncRole">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncMenu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncUserRoleMapping">
+            <summary>
+            用户-角色多对多映射
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncPermission">
+            <summary>
+            权限
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncRolePermissionMapping">
+            <summary>
+            角色-权限多对多映射
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncPermissionWithAssignProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncZeusDbContext.DncPermissionWithMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Entities.DncZeusDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncIcon">
+            <summary>
+            图标实体类
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.Code">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.Size">
+            <summary>
+            图标的大小，单位是 px
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.Color">
+            <summary>
+            图标颜色
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.Custom">
+            <summary>
+            自定义图标
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.CreatedByUserGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.CreatedByUserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.ModifiedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.ModifiedByUserGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncIcon.ModifiedByUserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncMenu">
+            <summary>
+            菜单实体类
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.CreatedByUserGuid">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.CreatedByUserName">
+            <summary>
+            创建者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.ModifiedOn">
+            <summary>
+            最近修改时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.ModifiedByUserGuid">
+            <summary>
+            最近修改者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.ModifiedByUserName">
+            <summary>
+            最近修改者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncMenu.Permissions">
+            <summary>
+            菜单拥有的权限列表
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncPermission">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Entities.DncPermission.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Icon">
+            <summary>
+            图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Type">
+            <summary>
+            权限类型(0:菜单,1:按钮/操作/功能等)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.CreatedByUserGuid">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.CreatedByUserName">
+            <summary>
+            创建者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.ModifiedOn">
+            <summary>
+            最近修改时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.ModifiedByUserGuid">
+            <summary>
+            最近修改者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.ModifiedByUserName">
+            <summary>
+            最近修改者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Menu">
+            <summary>
+            关联的菜单
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermission.Roles">
+            <summary>
+            权限所属的角色集合
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncRole">
+            <summary>
+            角色实体类
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Entities.DncRole.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.Code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.CreatedByUserGuid">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.CreatedByUserName">
+            <summary>
+            创建者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.ModifiedOn">
+            <summary>
+            最近修改时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.ModifiedByUserGuid">
+            <summary>
+            最近修改者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.ModifiedByUserName">
+            <summary>
+            最近修改者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.IsSuperAdministrator">
+            <summary>
+            是否是超级管理员(超级管理员拥有系统的所有权限)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.IsBuiltin">
+            <summary>
+            是否是系统内置角色(系统内置角色不允许删除,修改操作)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.UserRoles">
+            <summary>
+            角色拥有的用户集合
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRole.Permissions">
+            <summary>
+            角色拥有的权限集合
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncRolePermissionMapping">
+            <summary>
+            角色权限关系表
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRolePermissionMapping.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRolePermissionMapping.PermissionCode">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRolePermissionMapping.DncRole">
+            <summary>
+            角色实体
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRolePermissionMapping.DncPermission">
+            <summary>
+            权限实体
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncRolePermissionMapping.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.Guid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.CreatedByUserGuid">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.CreatedByUserName">
+            <summary>
+            创建者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.ModifiedOn">
+            <summary>
+            最近修改时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.ModifiedByUserGuid">
+            <summary>
+            最近修改者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.ModifiedByUserName">
+            <summary>
+            最近修改者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.Description">
+            <summary>
+            用户描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUser.UserRoles">
+            <summary>
+            用户的角色集合
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.UserType.SuperAdministator">
+            <summary>
+            超级管理员
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.UserType.Admin">
+            <summary>
+            管理员
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.UserType.GeneralUser">
+            <summary>
+            一般用户
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.UserStatus">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.UserStatus.All">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.UserStatus.Forbidden">
+            <summary>
+            已禁用
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.UserStatus.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncUserRoleMapping">
+            <summary>
+            用户-角色映射
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUserRoleMapping.UserGuid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUserRoleMapping.DncUser">
+            <summary>
+            用户实体
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUserRoleMapping.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUserRoleMapping.DncRole">
+            <summary>
+            角色实体
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncUserRoleMapping.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.Enums.CommonEnum">
+            <summary>
+            通用枚举类
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.IsDeleted.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.Enums.CommonEnum.IsLocked">
+            <summary>
+            是否已被锁定
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.IsLocked.UnLocked">
+            <summary>
+            未锁定
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.IsLocked.Locked">
+            <summary>
+            已锁定
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.Enums.CommonEnum.IsEnabled">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.IsEnabled.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.IsEnabled.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.Enums.CommonEnum.Status">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.Status.All">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.Status.Forbidden">
+            <summary>
+            已禁用
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.Status.Normal">
+            <summary>
+            正常
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.Enums.CommonEnum.PermissionType">
+            <summary>
+            权限类型
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.PermissionType.Menu">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.PermissionType.Action">
+            <summary>
+            按钮/操作/功能
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.Enums.CommonEnum.YesOrNo">
+            <summary>
+            是否枚举
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.YesOrNo.All">
+            <summary>
+            所有
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.YesOrNo.No">
+            <summary>
+            否
+            </summary>
+        </member>
+        <member name="F:DncZeus.Api.Entities.Enums.CommonEnum.YesOrNo.Yes">
+            <summary>
+            是
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty.MenuGuid">
+            <summary>
+            权限关联的菜单GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.QueryModels.DncPermission.DncPermissionWithAssignProperty.IsAssigned">
+            <summary>
+            权限是否已分配到当前角色
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Entities.DncPermissionWithMenu">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.PermissionCode">
+            <summary>
+            权限码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.PermissionActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.PermissionName">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.PermissionType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.MenuAlias">
+            <summary>
+            菜单别名(与前端路由配置中的name值保持一致)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Entities.DncPermissionWithMenu.IsDefaultRouter">
+            <summary>
+            是否是默认前端路由
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.AuthContext.AuthContextService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.AuthContext.AuthContextService.Configure(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="httpContextAccessor"></param>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextService.Current">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextService.CurrentUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextService.IsAuthenticated">
+            <summary>
+            是否已授权
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextService.IsSupperAdministator">
+            <summary>
+            是否是超级管理员
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.AuthContext.AuthContextUser">
+            <summary>
+            登录用户上下文
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextUser.Guid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextUser.DisplayName">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextUser.LoginName">
+            <summary>
+            登录名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextUser.EmailAddress">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextUser.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.AuthContext.AuthContextUser.Avator">
+            <summary>
+            头像地址
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.ConfigurationManager">
+            <summary>
+            配置文件管理器
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.ConfigurationManager.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.ConfigurationManager.AppSettings">
+            <summary>
+            读取配置文件[AppSettings]节点数据
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.CustomException.CustomAuthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.CustomException.CustomAuthorizeAttribute.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.CustomException.CustomAuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.CustomException.ExceptionMiddleware">
+            <summary>
+            异常中间件
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.CustomException.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.CustomException.HttpException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.CustomException.HttpException.#ctor(System.Net.HttpStatusCode)">
+            <summary>
+            
+            </summary>
+            <param name="statusCode"></param>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.CustomException.HttpException.StatusCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.CustomException.ValidateModelAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.CustomException.ValidateModelAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.DataAccess.EntityFrameworkExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataAccess.EntityFrameworkExtension.FromSql``1(Microsoft.EntityFrameworkCore.Infrastructure.DatabaseFacade,System.String,System.Object)">
+            <summary>
+            调用ADO.NET执行SQL语句查询泛型集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="database">数据库连接上下文</param>
+            <param name="sql">SQL语句</param>
+            <param name="parameters">SQL语句需要的参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.DataAccess.OrderByExtensions">
+            <summary>
+            排序静态扩展类
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.DataAccess.QueryParamNameAttribute">
+            <summary>
+            Use for an alternative param name other than the propery name
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.DataAccess.QueryParamIgnoreAttribute">
+            <summary>
+            Ignore this property
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.DataAccess.TypeConvertor">
+            <summary>
+            Convert a base data type to another base data type
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.DbType)">
+            <summary>
+            Convert db type to .Net data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataAccess.TypeConvertor.ToNetType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL type to .Net data type
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataAccess.TypeConvertor.ToDbType(System.Type)">
+            <summary>
+            Convert .Net type to Db type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataAccess.TypeConvertor.ToDbType(System.Data.SqlDbType)">
+            <summary>
+            Convert TSQL data type to DbType
+            </summary>
+            <param name="sqlDbType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Type)">
+            <summary>
+            Convert .Net type to TSQL data type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataAccess.TypeConvertor.ToSqlDbType(System.Data.DbType)">
+            <summary>
+            Convert DbType type to TSQL data type
+            </summary>
+            <param name="dbType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.DataTableConvert">
+            <summary>
+            把datatable转换为对象集合列表List&lt;T&gt;
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.DataTableConvert.ToList``1(System.Data.DataTable)">
+            <summary>
+            将DataTable转换成泛型对象列表
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.QueryableExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.QueryableExtension.Paged``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            IQueryable分页
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <param name="currentPage"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DncZeus.Api.Extensions.QueryableExtension.ToSql``1(System.Linq.IQueryable{``0})">
+            <summary>
+            
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.Extensions.ResponseModelFactory">
+            <summary>
+            /
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.ResponseModelFactory.CreateInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Extensions.ResponseModelFactory.CreateResultInstance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Models.Menu.Router">
+            <summary>
+            用于前端的路由对象
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Models.Menu.RouterMeta">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.Models.Response.ResponseModel">
+            <summary>
+            请求响应实体
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.#ctor">
+            <summary>
+            请求响应实体类
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Models.Response.ResponseModel.Code">
+            <summary>
+            响应代码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Models.Response.ResponseModel.Message">
+            <summary>
+            响应消息内容
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Models.Response.ResponseModel.Data">
+            <summary>
+            返回的响应数据
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.SetSuccess(System.String)">
+            <summary>
+            设置响应状态为成功
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.SetFailed(System.String)">
+            <summary>
+            设置响应状态为失败
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.SetIsTrial(System.String)">
+            <summary>
+            设置响应状态为体验版(返回失败结果)
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.SetError(System.String)">
+            <summary>
+            设置响应状态为错误
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.SetNotFound(System.String)">
+            <summary>
+            设置响应状态为未知资源
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.SetNoPermission(System.String)">
+            <summary>
+            设置响应状态为无权限
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseModel.SetData(System.Object)">
+            <summary>
+            设置响应数据
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:DncZeus.Api.Models.Response.ResponseResultModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.Models.Response.ResponseResultModel.TotalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Models.Response.ResponseResultModel.SetData(System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="totalCount"></param>
+        </member>
+        <member name="T:DncZeus.Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Program.Main(System.String[])">
+            <summary>
+            应用程序启动入口方法(Main)
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:DncZeus.Api.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.Rbac.Icon.IconRequestPayload">
+            <summary>
+            图标请求参数实体
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Icon.IconRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Icon.IconRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.Rbac.Menu.MenuRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Menu.MenuRequestPayload.ParentGuid">
+            <summary>
+            上级菜单GUID
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Permission.PermissionRequestPayload.MenuGuid">
+            <summary>
+            关联菜单GUID
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload">
+            <summary>
+            角色分配权限的请求载体类
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.RoleCode">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Role.RoleAssignPermissionPayload.Permissions">
+            <summary>
+            权限列表
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.Rbac.Role.RoleRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Role.RoleRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.Role.RoleRequestPayload.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.Rbac.User.UserRequestPayload">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.User.UserRequestPayload.IsDeleted">
+            <summary>
+            是否已被删除
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Rbac.User.UserRequestPayload.Status">
+            <summary>
+            用户状态
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.RequestPayload">
+            <summary>
+            请求实体
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.RequestPayload.RequestPayload.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.RequestPayload.PageSize">
+            <summary>
+            分页大小
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.RequestPayload.CurrentPage">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.RequestPayload.Sort">
+            <summary>
+            排序对象集合(支持多个字段排序)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.RequestPayload.OrderBy">
+            <summary>
+            组合后的排序字符串
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.RequestPayload.FirstSort">
+            <summary>
+            第一个排序字段(单个字段排序)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.RequestPayload.Kw">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.RequestPayload.Sort">
+            <summary>
+            排序实体对象
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.RequestPayload.Sort.#ctor">
+            <summary>
+            排序实体对象构造函数
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Sort.Field">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.RequestPayload.Sort.Direct">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:DncZeus.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:DncZeus.Api.Utils.RandomHelper">
+            <summary>
+            随机数帮助类
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.Utils.RandomHelper.GetRandomizer(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            生成指定长度的随机字符串
+            </summary>
+            <param name="intLength">随机字符串长度</param>
+            <param name="booNumber">生成的字符串中是否包含数字</param>
+            <param name="booSign">生成的字符串中是否包含符号</param>
+            <param name="booSmallword">生成的字符串中是否包含小写字母</param>
+            <param name="booBigword">生成的字符串中是否包含大写字母</param>
+            <returns></returns>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel">
+            <summary>
+            图标的视图类(创建/编辑)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.Code">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.Size">
+            <summary>
+            图标的大小，单位是 px
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.Color">
+            <summary>
+            图标颜色
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.Custom">
+            <summary>
+            自定义图标
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconCreateViewModel.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncIcon.IconImportViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconImportViewModel.Icons">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.Code">
+            <summary>
+            图标名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.Size">
+            <summary>
+            图标的大小，单位是 px
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.Color">
+            <summary>
+            图标颜色
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.Custom">
+            <summary>
+            自定义图标
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.CreatedByUserGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.CreatedByUserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.ModifiedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.ModifiedByUserGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncIcon.IconJsonModel.ModifiedByUserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuCreateViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Guid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuEditViewModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Guid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Url">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Alias">
+            <summary>
+            页面别名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Icon">
+            <summary>
+            菜单图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.ParentGuid">
+            <summary>
+            父级GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.ParentName">
+            <summary>
+            上级菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Level">
+            <summary>
+            菜单层级深度
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.Status">
+            <summary>
+            是否可用(0:禁用,1:可用)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.IsDefaultRouter">
+            <summary>
+            是否为默认路由
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.CreatedByUserGuid">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.CreatedByUserName">
+            <summary>
+            创建者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.ModifiedOn">
+            <summary>
+            最近修改时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.ModifiedByUserGuid">
+            <summary>
+            最近修改者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuJsonModel.ModifiedByUserName">
+            <summary>
+            最近修改者姓名
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree">
+            <summary>
+            用于iview的菜单树
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncMenu.MenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.Icon">
+            <summary>
+            图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionCreateViewModel.Type">
+            <summary>
+            权限类型(0:菜单,1:按钮/操作/功能等)
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.Icon">
+            <summary>
+            图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.Type">
+            <summary>
+            权限类型(0:菜单,1:按钮/操作/功能等)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.CreatedByUserId">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.CreatedByUserName">
+            <summary>
+            创建者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.ModifiedOn">
+            <summary>
+            最近修改时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.ModifiedByUserId">
+            <summary>
+            最近修改者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionEditViewModel.ModifiedByUserName">
+            <summary>
+            最近修改者
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel">
+            <summary>
+            权限实体类
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.MenuGuid">
+            <summary>
+            菜单GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.MenuName">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.ActionCode">
+            <summary>
+            权限操作码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.Icon">
+            <summary>
+            图标(可选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.IsDeleted">
+            <summary>
+            是否已删
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.Type">
+            <summary>
+            权限类型(0:菜单,1:按钮/操作/功能等)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.CreatedOn">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.CreatedByUserId">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.CreatedByUserName">
+            <summary>
+            创建者姓名
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.ModifiedOn">
+            <summary>
+            最近修改时间
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.ModifiedByUserId">
+            <summary>
+            最近修改者ID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.ModifiedByUserName">
+            <summary>
+            最近修改者
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionJsonModel.PermissionTypeText">
+            <summary>
+            权限类型的显示文本
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree">
+            <summary>
+            用于角色权限的菜单树
+            </summary>
+        </member>
+        <member name="M:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Guid">
+            <summary>
+            GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.ParentGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Title">
+            <summary>
+            标题(菜单名称)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Expand">
+            <summary>
+            是否展开子节点
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Disabled">
+            <summary>
+            禁掉响应
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.DisableCheckbox">
+            <summary>
+            禁掉 checkbox
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Selected">
+            <summary>
+            是否选中子节点	
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Checked">
+            <summary>
+            是否勾选(如果勾选，子节点也会全部勾选)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.AllAssigned">
+            <summary>
+            当前菜单的所有权限都已分配到指定角色
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Permissions">
+            <summary>
+            当前菜单拥有的权限功能
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionMenuTree.Children">
+            <summary>
+            子节点属性数组
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionElement">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionElement.Code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionElement.Name">
+            <summary>
+            权限名称
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncPermission.PermissionElement.IsAssignedToRole">
+            <summary>
+            是否已分配到指定角色
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncRole.RoleCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncRole.RoleCreateViewModel.IsSuperAdministrator">
+            <summary>
+            是否是超级管理员(超级管理员拥有系统的所有权限)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncRole.RoleCreateViewModel.IsBuiltin">
+            <summary>
+            是否是系统内置角色(系统内置角色不允许删除,修改操作)
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncRole.RoleJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncRole.RoleJsonModel.IsSuperAdministrator">
+            <summary>
+            是否是超级管理员(超级管理员拥有系统的所有权限)
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncRole.RoleJsonModel.IsBuiltin">
+            <summary>
+            是否是系统内置角色(系统内置角色不允许删除,修改操作)
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncUser.SaveUserRolesViewModel">
+            <summary>
+            用户获得的角色实体对象
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.SaveUserRolesViewModel.UserGuid">
+            <summary>
+            用户GUID
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.SaveUserRolesViewModel.AssignedRoles">
+            <summary>
+            已获得的角色代码集合
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.LoginName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.Avatar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.UserType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.IsLocked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserCreateViewModel.Description">
+            <summary>
+            用户描述信息
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.Guid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.LoginName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.Avatar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.UserType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.IsLocked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserEditViewModel.Description">
+            <summary>
+            用户描述信息
+            </summary>
+        </member>
+        <member name="T:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.Guid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.LoginName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.Avatar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.UserType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.IsLocked">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.CreatedByUserGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.CreatedByUserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.ModifiedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.ModifiedByUserGuid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DncZeus.Api.ViewModels.Rbac.DncUser.UserJsonModel.ModifiedByUserName">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
